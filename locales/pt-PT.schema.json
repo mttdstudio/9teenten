@@ -1983,6 +1983,13 @@
       "presets": {
         "name": "Faixa de registo de e-mail"
       }
+    },
+    "all": {
+      "padding": {
+        "section_padding_heading": "Secção preenchimento",
+        "padding_top": "Preenchimento superior",
+        "padding_bottom": "Preenchimento inferior"
+      }
     }
   }
 }

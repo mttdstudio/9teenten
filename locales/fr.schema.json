@@ -1983,6 +1983,13 @@
       "presets": {
         "name": "Bannière d'inscription à la liste de diffusion"
       }
+    },
+    "all": {
+      "padding": {
+        "section_padding_heading": "Marge de la section",
+        "padding_top": "Marge supérieure",
+        "padding_bottom": "Marge inférieure"
+      }
     }
   }
 }

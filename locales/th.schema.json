@@ -1983,6 +1983,13 @@
       "presets": {
         "name": "แบนเนอร์การลงทะเบียนอีเมล"
       }
+    },
+    "all": {
+      "padding": {
+        "section_padding_heading": "พื้นที่ว่างของส่วน",
+        "padding_top": "พื้นที่ว่างด้านบน",
+        "padding_bottom": "พื้นที่ว่างด้านล่าง"
+      }
     }
   }
 }
