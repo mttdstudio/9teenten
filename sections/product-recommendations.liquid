@@ -8,10 +8,23 @@
 <noscript>{{ 'component-product-grid.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'section-product-recommendations.css' | asset_url | stylesheet_tag }}</noscript>
 
+{% liquid
+  assign section_mobile_padding_top = section.settings.padding_top
+  assign section_mobile_padding_bottom = section.settings.padding_bottom
+
+  if section.settings.padding_top >= 28 or section.settings.padding_top <= 80
+    assign section_mobile_padding_top = section.settings.padding_top | minus: 10
+  endif
+
+  if section.settings.padding_bottom >= 28 or section.settings.padding_bottom <= 80
+    assign section_mobile_padding_bottom = section.settings.padding_bottom | minus: 10
+  endif
+%}
+
 {%- style -%}
   .section-{{ section.id }}-padding {
-    padding-top: calc({{ section.settings.padding_top }}px * 1);
-    padding-bottom: calc({{ section.settings.padding_bottom }}px * 1);
+    padding-top: {{ section_mobile_padding_top }}px;
+    padding-bottom: {{ section_mobile_padding_bottom }}px;
   }
 
   @media screen and (min-width: 750px) {
