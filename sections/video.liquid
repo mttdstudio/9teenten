@@ -2,15 +2,15 @@
 {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
 {% liquid
-  assign section_mobile_padding_top = section.settings.padding_top
-  assign section_mobile_padding_bottom = section.settings.padding_bottom
+  assign section_mobile_padding_top = section.settings.padding_top | at_most: 20
+  assign section_mobile_padding_bottom = section.settings.padding_bottom | at_most: 20
 
-  if section.settings.padding_top >= 28 or section.settings.padding_top <= 80
-    assign section_mobile_padding_top = section.settings.padding_top | minus: 10
+  if section.settings.padding_top > 28
+    assign section_mobile_padding_top = section.settings.padding_top | times: 0.7
   endif
 
-  if section.settings.padding_bottom >= 28 or section.settings.padding_bottom <= 80
-    assign section_mobile_padding_bottom = section.settings.padding_bottom | minus: 10
+  if section.settings.padding_bottom > 28
+    assign section_mobile_padding_bottom = section.settings.padding_bottom | times: 0.7
   endif
 %}
 
