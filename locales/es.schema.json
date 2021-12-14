@@ -1983,6 +1983,13 @@
       "presets": {
         "name": "Banner de suscripción de correo electrónico"
       }
+    },
+    "all": {
+      "padding": {
+        "section_padding_heading": "Relleno de sección",
+        "padding_top": "Relleno superior",
+        "padding_bottom": "Relleno inferior"
+      }
     }
   }
 }

@@ -1983,6 +1983,13 @@
       "presets": {
         "name": "Banner přihlášení k odběru e-mailů"
       }
+    },
+    "all": {
+      "padding": {
+        "section_padding_heading": "Vnitřní okraj sekce",
+        "padding_top": "Horní vnitřní okraj",
+        "padding_bottom": "Dolní vnitřní okraj"
+      }
     }
   }
 }

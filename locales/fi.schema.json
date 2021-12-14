@@ -1983,6 +1983,13 @@
       "presets": {
         "name": "Sähköpostirekisteröitymisen banneri"
       }
+    },
+    "all": {
+      "padding": {
+        "section_padding_heading": "Osion täyttö",
+        "padding_top": "Yläosan täyttö",
+        "padding_bottom": "Alaosan täyttö"
+      }
     }
   }
 }
