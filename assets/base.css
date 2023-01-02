@@ -2326,6 +2326,7 @@ input[type='checkbox'] {
 }
 
 .header__heading-logo {
+  fill: var(--color-foreground);
   height: auto;
   width: 100%;
   transition: width 0.3s cubic-bezier(0.52, 0, 0.61, 0.99);
