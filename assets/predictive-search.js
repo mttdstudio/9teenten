@@ -16,6 +16,7 @@ class PredictiveSearch extends SearchForm {
     this.input.form.addEventListener('submit', this.onFormSubmit.bind(this));
 
     this.input.addEventListener('focus', this.onFocus.bind(this));
+
     this.addEventListener('focusout', this.onFocusOut.bind(this));
     this.addEventListener('keyup', this.onKeyup.bind(this));
     this.addEventListener('keydown', this.onKeydown.bind(this));
@@ -213,7 +214,6 @@ class PredictiveSearch extends SearchForm {
     this.predictiveSearchResults.style.maxHeight = this.resultsMaxHeight || `${this.getResultsMaxHeight()}px`;
     this.setAttribute('open', true);
     this.input.setAttribute('aria-expanded', true);
-    this.isOpen = true;
   }
 
   close(clearSearchTerm = false) {

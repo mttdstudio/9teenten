@@ -201,7 +201,7 @@
                       id="Quantity-{{ section.id }}"
                       min="1"
                       value="1"
-                      form="{{ product_form_id }}"
+                      form="product-form-{{ section.id }}"
                     >
                     <button class="quantity__button no-js-hidden" name="plus" type="button">
                       <span class="visually-hidden">
@@ -353,14 +353,6 @@
   <script src="{{ 'product-model.js' | asset_url }}" defer></script>
 {%- endif -%}
 
-{%- liquid
-  if product.selected_or_first_available_variant.featured_media
-    assign seo_media = product.selected_or_first_available_variant.featured_media
-  else
-    assign seo_media = product.featured_media
-  endif
--%}
-
 <script type="application/ld+json">
   {
     "@context": "http://schema.org/",
@@ -371,11 +363,11 @@
       "image": [
         {{ seo_media | image_url: width: 1920 | prepend: "https:" | json }}
       ],
-    {%- endif %}
+    {%- endif -%}
     "description": {{ product.description | strip_html | json }},
-    {% if product.selected_or_first_available_variant.sku != blank -%}
+    {%- if product.selected_or_first_available_variant.sku != blank -%}
       "sku": {{ product.selected_or_first_available_variant.sku | json }},
-    {%- endif %}
+    {%- endif -%}
     "brand": {
       "@type": "Brand",
       "name": {{ product.vendor | json }}
