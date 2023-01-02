@@ -10,8 +10,8 @@
         "description": "1910 ASG - Edit by James Sweet",
         "full_width": true,
         "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "rich_text": {
