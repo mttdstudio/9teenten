@@ -100,10 +100,6 @@
         "share"
       ],
       "settings": {}
-    },
-    "product-recommendations": {
-      "type": "product-recommendations",
-      "settings": {}
     }
   },
   "order": [
