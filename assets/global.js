@@ -656,10 +656,6 @@ class SlideshowComponent extends SliderComponent {
     if (this.slider.getAttribute('data-autoplay') === 'true') this.setAutoPlay();
   }
 
-    this.pageCount.textContent = this.currentPage;
-    this.pageTotal.textContent = this.totalPages;
-  }
-
   onButtonClick(event) {
     super.onButtonClick(event);
     const isFirstSlide = this.currentPage === 1;
