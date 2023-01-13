@@ -1,0 +1,75 @@
+
+
+video-embed, vimeo-embed, youtube-embed {
+  position: relative;
+  display: grid;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: 100%;
+}
+
+:is(video-embed, vimeo-embed, youtube-embed) {
+  --plyr-color-main: #2696dd;
+}
+
+:is(video-embed, vimeo-embed, youtube-embed) video {
+  width: 100%;
+  height: 100%;
+}
+
+:is(video-embed, vimeo-embed, youtube-embed) img {
+  position: absolute;
+  z-index: 10;
+  object-fit: cover;
+  border: 0;
+  border-radius: inherit;
+  inset: 0;
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+
+:is(video-embed, vimeo-embed, youtube-embed) .is-poster-hidden img {
+  display: none;
+}
+
+:is(video-embed, vimeo-embed, youtube-embed) > button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 20;
+  display: grid;
+  background-color: unset;
+  padding: 20px;
+  border: 0;
+  transform: translate(-50%, -50%);
+  opacity: 0.7;
+  place-self: center;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+
+:is(video-embed, vimeo-embed, youtube-embed) > button:hover {
+  opacity: 1;
+}
+
+:is(video-embed, vimeo-embed, youtube-embed) > button > svg {
+  fill: white;
+  position: relative;
+  left: 2px;
+  inline-size: var(--plyr-control-icon-size, 50px);
+}
+
+:is(video-embed, vimeo-embed, youtube-embed) :is(iframe, img) {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  block-size: 100%;
+  border: 0;
+  border-radius: inherit;
+  inline-size: 100%;
+}
+
+.plyr ~ button {
+  display: none;
+}

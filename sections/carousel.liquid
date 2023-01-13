@@ -1,0 +1,205 @@
+
+
+<link
+  rel="stylesheet"
+  href="{{ 'keen-slider.min.css' | asset_url }}"
+/>
+<link
+  rel="stylesheet"
+  href="{{ 'section-carousel.css' | asset_url }}"
+/>
+
+<script type="module" src="{{ 'section-carousel.js' | asset_url }}"></script>
+
+<div class="slider-mobile-gutter">
+  <div id="keen-slider-{{ section.id }}" class="keen-slider" data-module="carousel" data-keen-slider-scrollable>
+    {% for block in section.blocks %}
+    <div
+      class="
+        keen-slider__slide
+        keen-slider__slide--{{ forloop.index }}
+        keen-slider__slide--{{ block.id }}
+      "
+    >
+      {%- if block.settings.image -%}
+          {%- assign width = section.settings.slide_height | times: block.settings.image.aspect_ratio | round -%}
+
+          <div class="image image--{{ block.id }}">
+            {{ block.settings.image | image_url: width: 3840 | image_tag:
+              loading: 'lazy',
+              width: width,
+              height: section.settings.slide_height,
+              sizes: "100vw",
+              widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+            }}
+          </div>
+
+          {%- style -%}
+            .keen-slider__slide--{{ block.id }} {
+              min-width: {{ width }}px !important;
+            }
+          {%- endstyle -%}
+        {%- elsif block.settings.video_mp4 or block.settings.video_webm -%}
+          <script type="module" src="{{ 'component-video.js' | asset_url }}"></script>
+          <link rel="stylesheet" href="{{ 'component-video.css' | asset_url }}" />
+          <link rel="stylesheet" href="{{ 'plyr.css' | asset_url }}" />
+
+          <video-embed data-module="video">
+            <video data-video playsinline>
+              {% if block.settings.video_mp4 != blank %}
+              <source src="{{ block.settings.video_mp4 }}" type="video/mp4">
+              {% endif %}
+
+              {% if block.settings.video_webm != blank %}
+              <source src="{{ block.settings.video_webm }}" type="video/webm">
+              {% endif %}
+            </video>
+            {%- comment -%} <img loading="lazy" src="{{  }}" width="1920" height="1080" alt="{{ block.settings.title }}"> {%- endcomment -%}
+            <button aria-label="Play video">
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 18 18">
+                <path d="M15.562 8.1L3.87.225c-.818-.562-1.87 0-1.87.9v15.75c0 .9 1.052 1.462 1.87.9L15.563 9.9c.584-.45.584-1.35 0-1.8z"></path>
+              </svg>
+            </button>
+          </video-embed>
+
+          {%- style -%}
+            .keen-slider__slide--{{ block.id }} {
+              min-width: {{ section.settings.slide_height | divided_by: 0.5625 }}px !important;
+            }
+          {%- endstyle -%}
+
+        {%- elsif block.settings.video_url -%}
+
+          {%- assign url_provider = block.settings.video_url -%}
+
+          {%- case url_provider.type -%}
+            {%- when 'youtube' -%}
+
+              <youtube-embed data-module="video">
+                <div data-video data-plyr-provider="{{ url_provider.type }}" data-plyr-embed-id="{{ url_provider.id }}"></div>
+                <img loading="lazy" src="https://i.ytimg.com/vi/{{ url_provider.id }}/hqdefault.jpg" width="1920" height="1080" alt="{{ block.settings.title }}">
+                <button aria-label="Play video">
+                  <svg aria-hidden="true" focusable="false" viewBox="0 0 18 18">
+                    <path d="M15.562 8.1L3.87.225c-.818-.562-1.87 0-1.87.9v15.75c0 .9 1.052 1.462 1.87.9L15.563 9.9c.584-.45.584-1.35 0-1.8z"></path>
+                  </svg>
+                </button>
+              </youtube-embed>
+
+            {%- when 'vimeo' -%}
+
+              <vimeo-embed data-module="video">
+                <div data-video data-plyr-provider="{{ url_provider.type }}" data-plyr-embed-id="{{ url_provider.id }}"></div>
+                <img loading="lazy" src="https://vumbnail.com/{{ url_provider.id }}.jpg" width="1920" height="1080" alt="{{ block.settings.title }}">
+                <button aria-label="Play video">
+                  <svg aria-hidden="true" focusable="false" viewBox="0 0 18 18">
+                    <path d="M15.562 8.1L3.87.225c-.818-.562-1.87 0-1.87.9v15.75c0 .9 1.052 1.462 1.87.9L15.563 9.9c.584-.45.584-1.35 0-1.8z"></path>
+                  </svg>
+                </button>
+              </vimeo-embed>
+          {%- endcase -%}
+        {%- else -%}
+
+          {%- style -%}
+            .keen-slider__slide--{{ block.id }} {
+              min-width: {{ section.settings.slide_height | divided_by: 0.5625 }}px !important;
+            }
+            .keen-slider__slide--{{ block.id }} svg {
+              fill: white;
+            }
+          {%- endstyle -%}
+          {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+        {%- endif -%}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{%- style -%}
+  [class^="keen-slider__slide--"],
+  [class*=" keen-slider__slide--"] {
+    height: {{ section.settings.slide_height }}px;
+  }
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "Carousel",
+  "tag": "section",
+  "class": "section--carousel",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Slides"
+    },
+    {
+      "type": "range",
+      "id": "slide_height",
+      "label": "Slide height",
+      "min": 100,
+      "max": 1000,
+      "step": 25,
+      "default": 600
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "t:sections.slideshow.blocks.slide.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.slideshow.blocks.slide.settings.image.label"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Image slide",
+          "label": "t:sections.slideshow.blocks.slide.settings.heading.label"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "header",
+          "content": "Video"
+        },
+        {
+          "type": "url",
+          "id": "video_mp4",
+          "label": "MP4"
+        },
+        {
+          "type": "url",
+          "id": "video_webm",
+          "label": "WebM"
+        },
+        {
+          "type": "video_url",
+          "id": "video_url_provider",
+          "accept": [
+            "youtube",
+            "vimeo"
+          ],
+          "label": "Video URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Carousel",
+      "blocks": [
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -354,6 +354,9 @@ slider-component.slider-component-full-width {
   cursor: pointer;
   width: 44px;
   height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .slider-button:not([disabled]):hover {
@@ -366,22 +369,21 @@ slider-component.slider-component-full-width {
 
 .slider-button[disabled] .icon {
   color: rgba(var(--color-foreground), 0.3);
+  cursor: not-allowed;
 }
 
 .slider-button--next .icon {
-  margin-right: -0.2rem;
-  transform: rotate(-90deg) translateX(0.15rem);
+  transform: rotate(-90deg);
 }
 
 .slider-button--prev .icon {
-  margin-left: -0.2rem;
-  transform: rotate(90deg) translateX(-0.15rem);
+  transform: rotate(90deg);
 }
 
 .slider-button--next:not([disabled]):hover .icon {
-  transform: rotate(-90deg) translateX(0.15rem) scale(1.07);
+  transform: rotate(-90deg) scale(1.1);
 }
 
 .slider-button--prev:not([disabled]):hover .icon {
-  transform: rotate(90deg) translateX(-0.15rem) scale(1.07);
+  transform: rotate(90deg) scale(1.1);
 }

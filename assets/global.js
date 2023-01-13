@@ -68,12 +68,6 @@ function trapFocus(container, elementToFocus = container) {
   document.addEventListener('focusin', trapFocusHandlers.focusin);
 
   elementToFocus.focus();
-
-  if (elementToFocus.tagName === 'INPUT' &&
-    ['search', 'text', 'email', 'url'].includes(elementToFocus.type) &&
-    elementToFocus.value) {
-    elementToFocus.setSelectionRange(0, elementToFocus.value.length);
-  }
 }
 
 // Here run the querySelector to figure out if the browser supports :focus-visible or not and run code based on it.
@@ -138,6 +132,7 @@ function onKeyUpEscape(event) {
 
   const summaryElement = openDetailsElement.querySelector('summary');
   openDetailsElement.removeAttribute('open');
+  summaryElement.setAttribute('aria-expanded', false);
   summaryElement.focus();
 }
 
@@ -170,24 +165,6 @@ function debounce(fn, wait) {
     t = setTimeout(() => fn.apply(this, args), wait);
   };
 }
-
-const serializeForm = form => {
-  const obj = {};
-  const formData = new FormData(form);
-
-  for (const key of formData.keys()) {
-    const regex = /(?:^(properties\[))(.*?)(?:\]$)/;
-
-    if (regex.test(key)) {
-      obj.properties = obj.properties || {};
-      obj.properties[regex.exec(key)[2]] = formData.get(key);
-    } else {
-      obj[key] = formData.get(key);
-    }
-  }
-
-  return JSON.stringify(obj);
-};
 
 function fetchConfig(type = 'json') {
   return {
@@ -311,8 +288,6 @@ class MenuDrawer extends HTMLElement {
     super();
 
     this.mainDetailsToggle = this.querySelector('details');
-    const summaryElements = this.querySelectorAll('summary');
-    this.addAccessibilityAttributes(summaryElements);
 
     this.addEventListener('keyup', this.onKeyUp.bind(this));
     this.addEventListener('focusout', this.onFocusOut.bind(this));
@@ -324,21 +299,13 @@ class MenuDrawer extends HTMLElement {
     this.querySelectorAll('button').forEach(button => button.addEventListener('click', this.onCloseButtonClick.bind(this)));
   }
 
-  addAccessibilityAttributes(summaryElements) {
-    summaryElements.forEach(element => {
-      element.setAttribute('role', 'button');
-      element.setAttribute('aria-expanded', false);
-      element.setAttribute('aria-controls', element.nextElementSibling.id);
-    });
-  }
-
   onKeyUp(event) {
     if(event.code.toUpperCase() !== 'ESCAPE') return;
 
     const openDetailsElement = event.target.closest('details[open]');
     if(!openDetailsElement) return;
 
-    openDetailsElement === this.mainDetailsToggle ? this.closeMenuDrawer(this.mainDetailsToggle.querySelector('summary')) : this.closeSubmenu(openDetailsElement);
+    openDetailsElement === this.mainDetailsToggle ? this.closeMenuDrawer(event, this.mainDetailsToggle.querySelector('summary')) : this.closeSubmenu(openDetailsElement);
   }
 
   onSummaryClick(event) {
@@ -346,6 +313,12 @@ class MenuDrawer extends HTMLElement {
     const detailsElement = summaryElement.parentNode;
     const parentMenuElement = detailsElement.closest('.has-submenu');
     const isOpen = detailsElement.hasAttribute('open');
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    function addTrapFocus() {
+      trapFocus(summaryElement.nextElementSibling, detailsElement.querySelector('button'));
+      summaryElement.nextElementSibling.removeEventListener('transitionend', addTrapFocus);
+    }
 
     if (detailsElement === this.mainDetailsToggle) {
       if(isOpen) event.preventDefault();
@@ -355,8 +328,6 @@ class MenuDrawer extends HTMLElement {
         document.documentElement.style.setProperty('--viewport-height', `${window.innerHeight}px`);
       }
     } else {
-      trapFocus(summaryElement.nextElementSibling, detailsElement.querySelector('button'));
-
       setTimeout(() => {
         detailsElement.classList.add('menu-opening');
         summaryElement.setAttribute('aria-expanded', true);
@@ -563,6 +534,7 @@ class SliderComponent extends HTMLElement {
 
     if (!this.slider || !this.nextButton) return;
 
+    this.initPages();
     const resizeObserver = new ResizeObserver(entries => this.initPages());
     resizeObserver.observe(this.slider);
 
@@ -586,10 +558,6 @@ class SliderComponent extends HTMLElement {
   }
 
   update() {
-    // Temporarily prevents unneeded updates resulting from variant changes
-    // This should be refactored as part of https://github.com/Shopify/dawn/issues/2057
-    if (!this.slider || !this.nextButton) return;
-
     const previousPage = this.currentPage;
     this.currentPage = Math.round(this.slider.scrollLeft / this.sliderItemOffset) + 1;
 
@@ -654,6 +622,20 @@ class SlideshowComponent extends SliderComponent {
     this.setSlideVisibility();
 
     if (this.slider.getAttribute('data-autoplay') === 'true') this.setAutoPlay();
+  }
+
+  setAutoPlay() {
+    this.sliderAutoplayButton = this.querySelector('.slideshow__autoplay');
+    this.autoplaySpeed = this.slider.dataset.speed * 1000;
+
+    this.sliderAutoplayButton.addEventListener('click', this.autoPlayToggle.bind(this));
+    this.addEventListener('mouseover', this.focusInHandling.bind(this));
+    this.addEventListener('mouseleave', this.focusOutHandling.bind(this));
+    this.addEventListener('focusin', this.focusInHandling.bind(this));
+    this.addEventListener('focusout', this.focusOutHandling.bind(this));
+
+    this.play();
+    this.autoplayButtonIsSetToPlay = true;
   }
 
   onButtonClick(event) {
@@ -758,14 +740,14 @@ class SlideshowComponent extends SliderComponent {
 
   linkToSlide(event) {
     event.preventDefault();
-    const slideScrollPosition = event.currentTarget.name === 'next' ? this.slider.scrollLeft + this.sliderLastItem.clientWidth : this.slider.scrollLeft - this.sliderLastItem.clientWidth;
+    const slideScrollPosition = this.slider.scrollLeft + this.sliderFirstItemNode.clientWidth * (this.sliderControlLinksArray.indexOf(event.currentTarget) + 1 - this.currentPage);
     this.slider.scrollTo({
       left: slideScrollPosition
     });
   }
 }
 
-customElements.define('slider-component', SliderComponent);
+customElements.define('slideshow-component', SlideshowComponent);
 
 class VariantSelects extends HTMLElement {
   constructor() {
@@ -779,7 +761,6 @@ class VariantSelects extends HTMLElement {
     this.toggleAddButton(true, '', false);
     this.updatePickupAvailability();
     this.removeErrorMessage();
-    this.updateVariantStatuses();
 
     if (!this.currentVariant) {
       this.toggleAddButton(true, '', true);
@@ -789,6 +770,7 @@ class VariantSelects extends HTMLElement {
       this.updateURL();
       this.updateVariantInput();
       this.renderProductInfo();
+      this.updateShareUrl();
     }
   }
 
@@ -837,28 +819,6 @@ class VariantSelects extends HTMLElement {
     });
   }
 
-  updateVariantStatuses() {
-    const selectedOptionOneVariants = this.variantData.filter(variant => this.querySelector(':checked').value === variant.option1);
-    const inputWrappers = [...this.querySelectorAll('.product-form__input')];
-    inputWrappers.forEach((option, index) => {
-      if (index === 0) return;
-      const optionInputs = [...option.querySelectorAll('input[type="radio"], option')]
-      const previousOptionSelected = inputWrappers[index - 1].querySelector(':checked').value;
-      const availableOptionInputsValue = selectedOptionOneVariants.filter(variant => variant.available && variant[`option${ index }`] === previousOptionSelected).map(variantOption => variantOption[`option${ index + 1 }`]);
-      this.setInputAvailability(optionInputs, availableOptionInputsValue)
-    });
-  }
-
-  setInputAvailability(listOfOptions, listOfAvailableOptions) {
-    listOfOptions.forEach(input => {
-      if (listOfAvailableOptions.includes(input.getAttribute('value'))) {
-        input.innerText = input.getAttribute('value');
-      } else {
-        input.innerText = window.variantStrings.unavailable_with_option.replace('[value]', input.getAttribute('value'));
-      }
-    });
-  }
-
   updatePickupAvailability() {
     const pickUpAvailability = document.querySelector('pickup-availability');
     if (!pickUpAvailability) return;
@@ -880,35 +840,17 @@ class VariantSelects extends HTMLElement {
   }
 
   renderProductInfo() {
-    const requestedVariantId = this.currentVariant.id;
-
-    fetch(`${this.dataset.url}?variant=${requestedVariantId}&section_id=${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`)
+    fetch(`${this.dataset.url}?variant=${this.currentVariant.id}&section_id=${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`)
       .then((response) => response.text())
       .then((responseText) => {
-        // prevent unnecessary ui changes from abandoned selections
-        if (this.currentVariant.id !== requestedVariantId) return;
-
         const html = new DOMParser().parseFromString(responseText, 'text/html')
         const destination = document.getElementById(`price-${this.dataset.section}`);
         const source = html.getElementById(`price-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
-        const skuSource = html.getElementById(`Sku-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
-        const skuDestination = document.getElementById(`Sku-${this.dataset.section}`);
-        const inventorySource = html.getElementById(`Inventory-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
-        const inventoryDestination = document.getElementById(`Inventory-${this.dataset.section}`);
-
         if (source && destination) destination.innerHTML = source.innerHTML;
-        if (inventorySource && inventoryDestination) inventoryDestination.innerHTML = inventorySource.innerHTML;
-        if (skuSource && skuDestination) {
-          skuDestination.innerHTML = skuSource.innerHTML;
-          skuDestination.classList.toggle('visibility-hidden', skuSource.classList.contains('visibility-hidden'));
-        }
 
         const price = document.getElementById(`price-${this.dataset.section}`);
 
         if (price) price.classList.remove('visibility-hidden');
-
-        if (inventoryDestination) inventoryDestination.classList.toggle('visibility-hidden', inventorySource.innerText === '');
-
         this.toggleAddButton(!this.currentVariant.available, window.variantStrings.soldOut);
       });
   }
@@ -921,7 +863,7 @@ class VariantSelects extends HTMLElement {
     if (!addButton) return;
 
     if (disable) {
-      addButton.setAttribute('disabled', true);
+      addButton.setAttribute('disabled', 'disabled');
       if (text) addButtonText.textContent = text;
     } else {
       addButton.removeAttribute('disabled');
@@ -936,14 +878,9 @@ class VariantSelects extends HTMLElement {
     const addButton = button.querySelector('[name="add"]');
     const addButtonText = button.querySelector('[name="add"] > span');
     const price = document.getElementById(`price-${this.dataset.section}`);
-    const inventory = document.getElementById(`Inventory-${this.dataset.section}`);
-    const sku = document.getElementById(`Sku-${this.dataset.section}`);
-
     if (!addButton) return;
     addButtonText.textContent = window.variantStrings.unavailable;
     if (price) price.classList.add('visibility-hidden');
-    if (inventory) inventory.classList.add('visibility-hidden');
-    if (sku) sku.classList.add('visibility-hidden');
   }
 
   getVariantData() {
@@ -957,16 +894,6 @@ customElements.define('variant-selects', VariantSelects);
 class VariantRadios extends VariantSelects {
   constructor() {
     super();
-  }
-
-  setInputAvailability(listOfOptions, listOfAvailableOptions) {
-    listOfOptions.forEach(input => {
-      if (listOfAvailableOptions.includes(input.getAttribute('value'))) {
-        input.classList.remove('disabled');
-      } else {
-        input.classList.add('disabled');
-      }
-    });
   }
 
   updateOptions() {

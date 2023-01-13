@@ -1,0 +1,55 @@
+<script type="module" src="{{ 'component-video-hero.js' | asset_url }}"></script>
+<link rel="stylesheet" href="{{ 'component-video-hero.css' | asset_url }}" />
+<link rel="stylesheet" href="{{ 'plyr.css' | asset_url }}" />
+
+<div class="slider-mobile-gutter">
+  <div class="c-video" data-module="video-hero">
+    <video playsinline autoplay data-video>
+      {% if section.settings.video_mp4 != blank %}
+      <source src="{{ section.settings.video_mp4 }}" type="video/mp4">
+      {% endif %}
+
+      {% if section.settings.video_webm != blank %}
+      <source src="{{ section.settings.video_webm }}" type="video/webm">
+      {% endif %}
+    </video>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Video Hero",
+  "tag": "section",
+  "class": "section--vide-hero",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Video"
+    },
+    {
+      "type": "url",
+      "id": "video_mp4",
+      "label": "MP4"
+    },
+    {
+      "type": "url",
+      "id": "video_webm",
+      "label": "WebM"
+    },
+    {
+      "type": "video_url",
+      "id": "video_url_provider",
+      "accept": [
+        "youtube",
+        "vimeo"
+      ],
+      "label": "Video URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video Hero"
+    }
+  ]
+}
+{% endschema %}
