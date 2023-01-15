@@ -2,9 +2,23 @@
 <link rel="stylesheet" href="{{ 'component-video-hero.css' | asset_url }}" />
 <link rel="stylesheet" href="{{ 'plyr.css' | asset_url }}" />
 
+{%- liquid
+  assign autiplay_video = section.settings.autoplay
+
+  capture autiplay
+    if autiplay_video
+      echo 'autoplay'
+    endif
+  endcapture
+-%}
+
 <div class="slider-mobile-gutter">
   <div class="c-video" data-module="video-hero">
-    <video playsinline autoplay data-video>
+    <video
+      playsinline
+      data-video
+      {{ autoplay }}
+    >
       {% if section.settings.video_mp4 != blank %}
       <source src="{{ section.settings.video_mp4 }}" type="video/mp4">
       {% endif %}
@@ -44,6 +58,11 @@
         "vimeo"
       ],
       "label": "Video URL"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Autoplay"
     }
   ],
   "presets": [
