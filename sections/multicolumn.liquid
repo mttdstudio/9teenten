@@ -32,7 +32,7 @@
           {{ section.settings.title | escape }}
         </h2>
         {% if section.settings.copy != blank %}
-        <p>{{ section.settings.copy }}</p>
+        <p>{{ section.settings.copy | newline_to_br }}</p>
         {% endif %}
         {%- if section.settings.button_label != blank and show_mobile_slider -%}
           <a href="{{ section.settings.button_link }}" class="link underlined-link large-up-hide">{{ section.settings.button_label | escape }}</a>
