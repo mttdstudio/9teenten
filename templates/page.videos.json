@@ -1,0 +1,130 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "7e108def-34d9-4fa5-80e7-7e796c778671": {
+      "type": "carousel",
+      "blocks": {
+        "template--15036640723059__7e108def-34d9-4fa5-80e7-7e796c778671-1673196575ead5d646-0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/19.jpg",
+            "heading": "Image slide",
+            "title": "",
+            "video_mp4": "",
+            "video_webm": "",
+            "video_url_provider": ""
+          }
+        },
+        "template--15036640723059__7e108def-34d9-4fa5-80e7-7e796c778671-1673196575ead5d646-1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/20216582_10158990095080640_1059025119_o.jpg",
+            "heading": "Image slide",
+            "title": "",
+            "video_mp4": "",
+            "video_webm": "",
+            "video_url_provider": ""
+          }
+        },
+        "d4861dd5-75ff-44df-816f-31aacac92ef1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/20210220_122318.jpg",
+            "heading": "Image slide",
+            "title": "",
+            "video_mp4": "",
+            "video_webm": "",
+            "video_url_provider": ""
+          }
+        },
+        "d24806b4-702c-4fb5-ad7f-e9a8ce9b456e": {
+          "type": "slide",
+          "settings": {
+            "heading": "Image slide",
+            "title": "",
+            "video_mp4": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/a6d94a527caa45d78339adcd321a59d7.mp4",
+            "video_webm": "",
+            "video_url_provider": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15036640723059__7e108def-34d9-4fa5-80e7-7e796c778671-1673196575ead5d646-0",
+        "template--15036640723059__7e108def-34d9-4fa5-80e7-7e796c778671-1673196575ead5d646-1",
+        "d4861dd5-75ff-44df-816f-31aacac92ef1",
+        "d24806b4-702c-4fb5-ad7f-e9a8ce9b456e"
+      ],
+      "settings": {
+        "slide_height": 600
+      }
+    },
+    "ef119169-af88-46b4-add7-f23fe680d4ec": {
+      "type": "carousel",
+      "blocks": {
+        "template--15036711567475__ef119169-af88-46b4-add7-f23fe680d4ec-167320452209b3d19f-0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1910-JACKSON_MILLER-68.jpg",
+            "heading": "Image slide",
+            "title": "",
+            "video_mp4": "",
+            "video_webm": ""
+          }
+        },
+        "template--15036711567475__ef119169-af88-46b4-add7-f23fe680d4ec-167320452209b3d19f-1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/16.jpg",
+            "heading": "Image slide",
+            "title": "",
+            "video_mp4": "",
+            "video_webm": ""
+          }
+        },
+        "dfc3872c-0dc3-42be-8cd4-1bcc180efb14": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/20.jpg",
+            "heading": "Image slide",
+            "title": "",
+            "video_mp4": "",
+            "video_webm": "",
+            "video_url_provider": ""
+          }
+        },
+        "220d3d07-4123-4b10-90ef-279d58a4e5a7": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/36552248_10160496548115640_3509032703678742528_n-1.jpg",
+            "heading": "Image slide",
+            "title": "",
+            "video_mp4": "",
+            "video_webm": "",
+            "video_url_provider": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15036711567475__ef119169-af88-46b4-add7-f23fe680d4ec-167320452209b3d19f-0",
+        "template--15036711567475__ef119169-af88-46b4-add7-f23fe680d4ec-167320452209b3d19f-1",
+        "dfc3872c-0dc3-42be-8cd4-1bcc180efb14",
+        "220d3d07-4123-4b10-90ef-279d58a4e5a7"
+      ],
+      "settings": {
+        "slide_height": 600
+      }
+    }
+  },
+  "order": [
+    "main",
+    "7e108def-34d9-4fa5-80e7-7e796c778671",
+    "ef119169-af88-46b4-add7-f23fe680d4ec"
+  ]
+}

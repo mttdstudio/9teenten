@@ -1,0 +1,149 @@
+{
+  "sections": {
+    "family": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--15039479414899__c853d957-e796-4f53-9ed2-c83288b4b085-1673539016b7cc32d5-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-volcom.png",
+            "title": "VOLCOM",
+            "text": "<p><a href=\"https:\/\/instagram.com\/volcom\" target=\"_blank\" title=\"https:\/\/instagram.com\/volcom\">@volcom<\/a> <a href=\"https:\/\/instagram.com\/volcomsnow\" target=\"_blank\" title=\"https:\/\/instagram.com\/volcomsnow\">@volcomsnow<\/a><\/p>",
+            "link_label": "Website",
+            "link": "https:\/\/www.volcom.com"
+          }
+        },
+        "template--15039479414899__c853d957-e796-4f53-9ed2-c83288b4b085-1673539016b7cc32d5-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Liberated_Brands_Logo_White_989x320_9ee1dfc4-0712-4d8f-bebe-0b3c9288cdd0.png",
+            "title": "LIBERATED BRANDS",
+            "text": "<p><a href=\"https:\/\/instagram.com\/liberatedbrands\" target=\"_blank\" title=\"https:\/\/instagram.com\/liberatedbrands\">@liberatedbrands<\/a><\/p>",
+            "link_label": "Wesbite",
+            "link": "https:\/\/www.liberatedbrands.com"
+          }
+        },
+        "template--15039479414899__c853d957-e796-4f53-9ed2-c83288b4b085-1673539016b7cc32d5-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-libtech.png",
+            "title": "LIB TECH",
+            "text": "<p><a href=\"https:\/\/instagram.com\/libtechnologies\" target=\"_blank\" title=\"https:\/\/instagram.com\/libtechnologies\">@libtechnologies<\/a><\/p>",
+            "link_label": "Website",
+            "link": "https:\/\/www.lib-tech.com"
+          }
+        },
+        "a9a5d851-5dc7-46e8-912c-d8e9b83c0238": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-vans.png",
+            "title": "VANS",
+            "text": "<p><a href=\"https:\/\/instagram.com\/vans\" target=\"_blank\" title=\"https:\/\/instagram.com\/vans\">@vans<\/a> <a href=\"https:\/\/instagram.com\/vanssnow\" target=\"_blank\" title=\"Vans Snow\">@vanssnow<\/a><\/p>",
+            "link_label": "Website",
+            "link": "https:\/\/www.vans.com\/en-us"
+          }
+        },
+        "663f917d-735f-4a3e-beb1-5f3f9c9116fb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-1910.png",
+            "title": "ASG",
+            "text": "<p><a href=\"https:\/\/instagram.com\/asgnation\" target=\"_blank\" title=\"https:\/\/instagram.com\/asgnation\">@asgnation<\/a><\/p>",
+            "link_label": "Website",
+            "link": "https:\/\/asgnation.bandcamp.com"
+          }
+        },
+        "747c8c94-4e21-4128-954d-a252095d7a79": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-theline_1bbd0db4-8679-4adf-acd8-8dd7b1a5a509.jpg",
+            "title": "theLINE",
+            "text": "<p><a href=\"https:\/\/instagram.com\/theline\" target=\"_blank\" title=\"https:\/\/instagram.com\/theline\">@theLINE<\/a><\/p>",
+            "link_label": "Website",
+            "link": "https:\/\/thelinemusic.bandcamp.com"
+          }
+        },
+        "d22ea4f8-8b6d-4f0f-8c2c-8f6578202a00": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-dragon-lodge.jpg",
+            "title": "DRAGON LODGE",
+            "text": "<p><a href=\"https:\/\/www.instagram.com\/dragonlodge\/\" target=\"_blank\" title=\"Dragon Lodge on Instagram\">@dragonlodge<\/a><\/p>",
+            "link_label": "Website",
+            "link": "https:\/\/dragonlodge.com\/"
+          }
+        },
+        "64b03179-9b9f-4c31-9d00-97d1ad70a9cb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-thejamesbrand-clip.png",
+            "title": "THE JAMES BRAND",
+            "text": "<p><a href=\"https:\/\/www.instagram.com\/thejamesbrand\/\" target=\"_blank\" title=\"The James Brand on Instagram\">@thejamesbrand<\/a><\/p>",
+            "link_label": "Website",
+            "link": "https:\/\/thejamesbrand.com"
+          }
+        },
+        "42a487a3-5a03-4254-8566-33980fa6f0f0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-baldafce.png",
+            "title": "BALDFACE LODGE",
+            "text": "<p><a href=\"https:\/\/www.instagram.com\/baldfacelodge\/\" target=\"_blank\" title=\"Bald Face Lodge on Instagram\">@baldfacelodge<\/a><\/p>",
+            "link_label": "Website",
+            "link": "https:\/\/baldface.com"
+          }
+        },
+        "1d79d5b9-febb-4814-bced-9df7e376e4e2": {
+          "type": "column",
+          "settings": {
+            "title": "VIDEOS BY",
+            "text": "<p>James Sweet<\/p><p><a href=\"https:\/\/instagram.com\/superradness\" target=\"_blank\" title=\"https:\/\/instagram.com\/superradness\">@superradness<\/a><\/p><p> <\/p><p>Will Graham<\/p><p><a href=\"https:\/\/instagram.com\/willbgraham\" target=\"_blank\" title=\"https:\/\/instagram.com\/willbgraham\">@willbgraham<\/a><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15039479414899__c853d957-e796-4f53-9ed2-c83288b4b085-1673539016b7cc32d5-0",
+        "template--15039479414899__c853d957-e796-4f53-9ed2-c83288b4b085-1673539016b7cc32d5-1",
+        "template--15039479414899__c853d957-e796-4f53-9ed2-c83288b4b085-1673539016b7cc32d5-2",
+        "a9a5d851-5dc7-46e8-912c-d8e9b83c0238",
+        "663f917d-735f-4a3e-beb1-5f3f9c9116fb",
+        "747c8c94-4e21-4128-954d-a252095d7a79",
+        "d22ea4f8-8b6d-4f0f-8c2c-8f6578202a00",
+        "64b03179-9b9f-4c31-9d00-97d1ad70a9cb",
+        "42a487a3-5a03-4254-8566-33980fa6f0f0",
+        "1d79d5b9-febb-4814-bced-9df7e376e4e2"
+      ],
+      "settings": {
+        "title": "Family",
+        "copy": "Thanks to everyone else that’s supported us on our way! We can't do this shit without you!",
+        "heading_size": "h1",
+        "image_width": "half",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "family",
+    "main"
+  ]
+}
