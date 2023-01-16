@@ -56,7 +56,7 @@
         "747c8c94-4e21-4128-954d-a252095d7a79": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-theline_1bbd0db4-8679-4adf-acd8-8dd7b1a5a509.jpg",
+            "image": "shopify:\/\/shop_images\/logo-theline-cut.png",
             "title": "theLINE",
             "text": "<p><a href=\"https:\/\/instagram.com\/theline\" target=\"_blank\" title=\"https:\/\/instagram.com\/theline\">@theLINE<\/a><\/p>",
             "link_label": "Website",
@@ -117,7 +117,7 @@
       ],
       "settings": {
         "title": "Family",
-        "copy": "Thanks to everyone else that’s supported us on our way! \nWe can't do this shit without you!",
+        "copy": "Thanks to everyone else that’s supported us on our way! We can't do this shit without you!",
         "heading_size": "h1",
         "image_width": "half",
         "image_ratio": "square",
