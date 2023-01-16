@@ -42,6 +42,13 @@
       {% endif %}
     </video>
   </div>
+  <div{% if section.settings.full_width %} class="page-width"{% endif %}>
+    {%- unless section.settings.heading == blank -%}
+      <div class="title-wrapper title-wrapper--no-top-margin">
+        <h2 class="title {{ section.settings.heading_size }}">{{ section.settings.heading }}</h2>
+      </div>
+    {%- endunless -%}
+  </div>
 </div>
 
 {% schema %}
