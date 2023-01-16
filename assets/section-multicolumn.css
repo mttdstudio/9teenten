@@ -70,6 +70,9 @@
 }
 
 .multicolumn:not(.background-none) .multicolumn-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: rgb(var(--color-background));
   height: 100%;
 }
