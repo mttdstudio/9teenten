@@ -398,6 +398,9 @@
         "options__4": {
           "label": "Extra large"
         }
+      },
+      "full_width": {
+        "label": "Make section full width"
       }
     },
     "announcement-bar": {
