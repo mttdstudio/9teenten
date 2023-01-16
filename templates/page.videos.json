@@ -8,36 +8,96 @@
         "padding_bottom": 28
       }
     },
+    "e00d0e3d-3413-4b10-95bc-14f86272c142": {
+      "type": "rich-text",
+      "blocks": {
+        "template--15041652359283__e00d0e3d-3413-4b10-95bc-14f86272c142-1673909152a20eb4d9-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Videos<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "template--15041652359283__e00d0e3d-3413-4b10-95bc-14f86272c142-1673909152a20eb4d9-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        },
+        "template--15041652359283__e00d0e3d-3413-4b10-95bc-14f86272c142-1673909152a20eb4d9-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--15041652359283__e00d0e3d-3413-4b10-95bc-14f86272c142-1673909152a20eb4d9-0",
+        "template--15041652359283__e00d0e3d-3413-4b10-95bc-14f86272c142-1673909152a20eb4d9-1",
+        "template--15041652359283__e00d0e3d-3413-4b10-95bc-14f86272c142-1673909152a20eb4d9-2"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "67f817a6-acd1-4646-b202-4a24352c5452": {
       "type": "video-hero",
       "settings": {
+        "heading": "Video by James Sweet",
+        "description": "",
         "video_mp4": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b0aff719dcad4000892eb71340706448.mp4",
         "video_webm": "",
         "video_url_provider": "",
-        "autoplay": false
+        "autoplay": false,
+        "full_width": false,
+        "padding_top": 0,
+        "padding_bottom": 8
       }
     },
     "356218e5-444d-4eac-bea6-0c8ec5f2c73e": {
       "type": "video-hero",
       "settings": {
+        "heading": "Video by James Sweet",
+        "description": "",
         "video_mp4": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/a6d94a527caa45d78339adcd321a59d7.mp4",
         "video_webm": "",
         "video_url_provider": "",
-        "autoplay": false
+        "autoplay": false,
+        "full_width": false,
+        "padding_top": 0,
+        "padding_bottom": 8
       }
     },
     "75c99e25-7a9c-4a46-8a0e-7eb84b4eda23": {
       "type": "video-hero",
       "settings": {
+        "heading": "Video by James Sweet",
+        "description": "",
         "video_mp4": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/99d996b8969649f09d61b667dbf7bf25.mp4",
         "video_webm": "",
         "video_url_provider": "",
-        "autoplay": false
+        "autoplay": false,
+        "full_width": false,
+        "padding_top": 0,
+        "padding_bottom": 8
       }
     }
   },
   "order": [
     "main",
+    "e00d0e3d-3413-4b10-95bc-14f86272c142",
     "67f817a6-acd1-4646-b202-4a24352c5452",
     "356218e5-444d-4eac-bea6-0c8ec5f2c73e",
     "75c99e25-7a9c-4a46-8a0e-7eb84b4eda23"
