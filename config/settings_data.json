@@ -351,7 +351,7 @@
       "main-password-header": {
         "type": "main-password-header",
         "settings": {
-          "logo": "{{ shop.brand.logo }}",
+          "logo": "shopify:\/\/shop_images\/logo-horizontal.png",
           "logo_max_width": 100,
           "color_scheme": "background-1"
         }
