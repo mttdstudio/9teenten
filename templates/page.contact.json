@@ -2,6 +2,7 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 36,
         "padding_bottom": 36
@@ -10,45 +11,31 @@
     "52bcdef1-f5fb-43d8-af7b-9a1ab1d5f025": {
       "type": "rich-text",
       "blocks": {
-        "template--15039479480435__52bcdef1-f5fb-43d8-af7b-9a1ab1d5f025-167361560659cc4adc-0": {
+        "413549ec-63ed-490a-9868-86ad286e65e6": {
           "type": "heading",
-          "disabled": true,
           "settings": {
-            "heading": "<p>Talk about your brand<\/p>",
+            "heading": "<p>Contact<\/p>",
             "heading_size": "h1"
           }
         },
         "template--15039479480435__52bcdef1-f5fb-43d8-af7b-9a1ab1d5f025-167361560659cc4adc-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Any professional or commission related inquires -<br\/><a href=\"mailto:commissions@9teenten.com\" title=\"For all professional & commission enquiries please email commissions@9teenten.com\">commissions@9teenten.com<\/a><\/p>"
-          }
-        },
-        "template--15039479480435__52bcdef1-f5fb-43d8-af7b-9a1ab1d5f025-167361560659cc4adc-2": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "text": "<p>Any professional or commission related enquiries -<br\/><a href=\"mailto:commissions@9teenten.com\" title=\"For all professional & commission enquiries please email commissions@9teenten.com\">commissions@9teenten.com<\/a><\/p>"
           }
         }
       },
       "block_order": [
-        "template--15039479480435__52bcdef1-f5fb-43d8-af7b-9a1ab1d5f025-167361560659cc4adc-0",
-        "template--15039479480435__52bcdef1-f5fb-43d8-af7b-9a1ab1d5f025-167361560659cc4adc-1",
-        "template--15039479480435__52bcdef1-f5fb-43d8-af7b-9a1ab1d5f025-167361560659cc4adc-2"
+        "413549ec-63ed-490a-9868-86ad286e65e6",
+        "template--15039479480435__52bcdef1-f5fb-43d8-af7b-9a1ab1d5f025-167361560659cc4adc-1"
       ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "left",
         "color_scheme": "background-1",
         "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 52
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "form": {
