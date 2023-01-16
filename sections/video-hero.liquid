@@ -5,19 +5,33 @@
 {%- liquid
   assign autiplay_video = section.settings.autoplay
 
-  capture autiplay
+  capture will_autoplay
     if autiplay_video
       echo 'autoplay'
     endif
   endcapture
 -%}
 
-<div class="slider-mobile-gutter">
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="video-section isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}-padding">
   <div class="c-video" data-module="video-hero">
     <video
       playsinline
       data-video
-      {{ autoplay }}
+      {{ will_autoplay }}
     >
       {% if section.settings.video_mp4 != blank %}
       <source src="{{ section.settings.video_mp4 }}" type="video/mp4">
@@ -36,6 +50,18 @@
   "tag": "section",
   "class": "section--vide-hero",
   "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Video",
+      "label": "t:sections.video.settings.heading.label"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "t:sections.video.settings.description.label",
+      "info": "t:sections.video.settings.description.info"
+    },
     {
       "type": "header",
       "content": "Video"
@@ -60,9 +86,43 @@
       "label": "Video URL"
     },
     {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
       "type": "checkbox",
       "id": "autoplay",
       "label": "Autoplay"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "t:sections.video.settings.full_width.label",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
     }
   ],
   "presets": [
