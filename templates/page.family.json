@@ -93,6 +93,16 @@
             "link": "https:\/\/baldface.com"
           }
         },
+        "ddf78e90-36a4-45b3-8f69-0eb20b80a615": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-steak.png",
+            "title": "STEAK",
+            "text": "<p><a href=\"https:\/\/www.instagram.com\/steakband\/\" target=\"_blank\" title=\"https:\/\/www.instagram.com\/steakband\/\">@steakband<\/a><\/p>",
+            "link_label": "Website",
+            "link": "https:\/\/steakmusic.bandcamp.com\/"
+          }
+        },
         "1d79d5b9-febb-4814-bced-9df7e376e4e2": {
           "type": "column",
           "settings": {
@@ -113,6 +123,7 @@
         "d22ea4f8-8b6d-4f0f-8c2c-8f6578202a00",
         "64b03179-9b9f-4c31-9d00-97d1ad70a9cb",
         "42a487a3-5a03-4254-8566-33980fa6f0f0",
+        "ddf78e90-36a4-45b3-8f69-0eb20b80a615",
         "1d79d5b9-febb-4814-bced-9df7e376e4e2"
       ],
       "settings": {
