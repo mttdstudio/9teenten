@@ -298,26 +298,9 @@
         "blocks": {
           "footer-0": {
             "type": "link_list",
-            "disabled": true,
             "settings": {
               "heading": "Quick links",
               "menu": "footer"
-            }
-          },
-          "footer-1": {
-            "type": "link_list",
-            "disabled": true,
-            "settings": {
-              "heading": "Info",
-              "menu": "footer"
-            }
-          },
-          "footer-2": {
-            "type": "text",
-            "disabled": true,
-            "settings": {
-              "heading": "Our mission",
-              "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
             }
           },
           "01cf4b1f-423f-4c78-988e-4e6992e89669": {
@@ -327,13 +310,20 @@
               "image_width": 170,
               "alignment": "center"
             }
+          },
+          "footer-2": {
+            "type": "text",
+            "settings": {
+              "heading": "Commissions",
+              "subtext": "<p>Any professional or <br\/>commission related enquiries -<br\/><a href=\"mailto:commissions@9teenten.com\" title=\"For all professional & commission enquiries please email commissions@9teenten.com\">commissions@9teenten.com<\/a><\/p>",
+              "text_alignment": "right"
+            }
           }
         },
         "block_order": [
           "footer-0",
-          "footer-1",
-          "footer-2",
-          "01cf4b1f-423f-4c78-988e-4e6992e89669"
+          "01cf4b1f-423f-4c78-988e-4e6992e89669",
+          "footer-2"
         ],
         "settings": {
           "color_scheme": "background-1",
