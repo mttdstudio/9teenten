@@ -144,6 +144,10 @@
   justify-self: flex-start;
 }
 
+.card__badge.hide {
+  display: none;
+}
+
 .card__badge.top {
   align-self: flex-start;
   grid-row-start: 1;

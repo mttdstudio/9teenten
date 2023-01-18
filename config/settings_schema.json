@@ -1264,6 +1264,22 @@
         "label": "t:settings_schema.badges.settings.position.label"
       },
       {
+        "type": "radio",
+        "id": "badge_override",
+        "options": [
+          {
+            "value": "show",
+            "label": "t:settings_schema.badges.settings.override.options__1.label"
+          },
+          {
+            "value": "hide",
+            "label": "t:settings_schema.badges.settings.override.options__2.label"
+          }
+        ],
+        "default": "show",
+        "label": "t:settings_schema.badges.settings.override.label"
+      },
+      {
         "type": "range",
         "id": "badge_corner_radius",
         "min": 0,

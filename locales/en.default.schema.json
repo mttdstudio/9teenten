@@ -103,6 +103,15 @@
           },
           "label": "Position on cards"
         },
+        "override": {
+          "options__1": {
+            "label": "Show"
+          },
+          "options__2": {
+            "label": "Hide"
+          },
+          "label": "Show or hide badges"
+        },
         "sale_badge_color_scheme": {
           "label": "Sale badge color scheme"
         },
