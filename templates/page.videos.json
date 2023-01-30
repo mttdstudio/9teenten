@@ -69,6 +69,7 @@
     },
     "97527162-905d-4cf4-afc4-ae489dc2758b": {
       "type": "rich-text",
+      "disabled": true,
       "blocks": {
         "template--15041047429235__97527162-905d-4cf4-afc4-ae489dc2758b-1675117298667cfc3c-1": {
           "type": "text",
@@ -105,6 +106,7 @@
     },
     "b3664436-c76c-4623-9f3e-ee1a2cb83b90": {
       "type": "rich-text",
+      "disabled": true,
       "blocks": {
         "template--15041047429235__b3664436-c76c-4623-9f3e-ee1a2cb83b90-1675117298667cfc3c-1": {
           "type": "text",
@@ -145,7 +147,7 @@
         "template--15041047429235__860a5c1e-5204-41f9-8eec-27daa30aa2ea-1675117298667cfc3c-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Video by James Sweet<\/p>"
+            "text": "<p>Filmed & edited by James Sweet<\/p>"
           }
         }
       },
@@ -157,8 +159,8 @@
         "content_alignment": "left",
         "color_scheme": "background-1",
         "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 52
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
