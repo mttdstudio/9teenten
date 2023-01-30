@@ -56,7 +56,7 @@
     "67f817a6-acd1-4646-b202-4a24352c5452": {
       "type": "video-hero",
       "settings": {
-        "heading": "1910",
+        "heading": "ASG 1910",
         "description": "",
         "video_mp4": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b0aff719dcad4000892eb71340706448.mp4",
         "video_webm": "",
@@ -92,21 +92,43 @@
     "356218e5-444d-4eac-bea6-0c8ec5f2c73e": {
       "type": "video-hero",
       "settings": {
-        "heading": "Video by James Sweet",
+        "heading": "MEGAMEGA",
         "description": "",
         "video_mp4": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/a6d94a527caa45d78339adcd321a59d7.mp4",
         "video_webm": "",
         "video_url_provider": "",
         "autoplay": false,
         "full_width": false,
+        "padding_top": 4,
+        "padding_bottom": 0
+      }
+    },
+    "b3664436-c76c-4623-9f3e-ee1a2cb83b90": {
+      "type": "rich-text",
+      "blocks": {
+        "template--15041047429235__b3664436-c76c-4623-9f3e-ee1a2cb83b90-1675117298667cfc3c-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Video by James Sweet<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15041047429235__b3664436-c76c-4623-9f3e-ee1a2cb83b90-1675117298667cfc3c-1"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "background-1",
+        "full_width": true,
         "padding_top": 0,
-        "padding_bottom": 8
+        "padding_bottom": 52
       }
     },
     "75c99e25-7a9c-4a46-8a0e-7eb84b4eda23": {
       "type": "video-hero",
       "settings": {
-        "heading": "Video by James Sweet",
+        "heading": "1910",
         "description": "",
         "video_mp4": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/99d996b8969649f09d61b667dbf7bf25.mp4",
         "video_webm": "",
@@ -114,7 +136,29 @@
         "autoplay": false,
         "full_width": false,
         "padding_top": 0,
-        "padding_bottom": 8
+        "padding_bottom": 0
+      }
+    },
+    "860a5c1e-5204-41f9-8eec-27daa30aa2ea": {
+      "type": "rich-text",
+      "blocks": {
+        "template--15041047429235__860a5c1e-5204-41f9-8eec-27daa30aa2ea-1675117298667cfc3c-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Video by James Sweet<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15041047429235__860a5c1e-5204-41f9-8eec-27daa30aa2ea-1675117298667cfc3c-1"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 52
       }
     }
   },
@@ -124,6 +168,8 @@
     "67f817a6-acd1-4646-b202-4a24352c5452",
     "97527162-905d-4cf4-afc4-ae489dc2758b",
     "356218e5-444d-4eac-bea6-0c8ec5f2c73e",
-    "75c99e25-7a9c-4a46-8a0e-7eb84b4eda23"
+    "b3664436-c76c-4623-9f3e-ee1a2cb83b90",
+    "75c99e25-7a9c-4a46-8a0e-7eb84b4eda23",
+    "860a5c1e-5204-41f9-8eec-27daa30aa2ea"
   ]
 }
