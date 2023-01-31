@@ -4,7 +4,7 @@
 
 {%- liquid
   assign autoplay_video   = section.settings.autoplay
-  assign poster           = section.settings.poster
+  assign poster           = section.settings.cover_image
   assign poster_file      = poster | image_url
 
   capture will_autoplay
