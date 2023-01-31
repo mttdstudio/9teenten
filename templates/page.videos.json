@@ -162,6 +162,41 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "8ec8b9ac-8556-41f2-ba11-ee2a1ad992b1": {
+      "type": "video-hero",
+      "settings": {
+        "heading": "ASG x 1910",
+        "description": "",
+        "video_mp4": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/af291e75dba74fdc8f46ec9c8900abb8.mp4",
+        "video_webm": "",
+        "autoplay": false,
+        "full_width": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "6d2c13a6-a616-45a4-b674-e763a9837fdb": {
+      "type": "rich-text",
+      "blocks": {
+        "template--15041047429235__6d2c13a6-a616-45a4-b674-e763a9837fdb-16751567876dffdc4e-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Filmed & edited by Will Graham<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15041047429235__6d2c13a6-a616-45a4-b674-e763a9837fdb-16751567876dffdc4e-1"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -172,6 +207,8 @@
     "356218e5-444d-4eac-bea6-0c8ec5f2c73e",
     "b3664436-c76c-4623-9f3e-ee1a2cb83b90",
     "75c99e25-7a9c-4a46-8a0e-7eb84b4eda23",
-    "860a5c1e-5204-41f9-8eec-27daa30aa2ea"
+    "860a5c1e-5204-41f9-8eec-27daa30aa2ea",
+    "8ec8b9ac-8556-41f2-ba11-ee2a1ad992b1",
+    "6d2c13a6-a616-45a4-b674-e763a9837fdb"
   ]
 }
