@@ -3,11 +3,19 @@
 <link rel="stylesheet" href="{{ 'plyr.css' | asset_url }}" />
 
 {%- liquid
-  assign autiplay_video = section.settings.autoplay
+  assign autoplay_video   = section.settings.autoplay
+  assign poster           = section.settings.poster
+  assign poster_file      = poster | image_url
 
   capture will_autoplay
-    if autiplay_video
+    if autoplay_video
       echo 'autoplay'
+    endif
+  endcapture
+
+  capture has_poster
+    if poster != blank
+      echo 'poster="' | append: poster_file | append: '"'
     endif
   endcapture
 -%}
@@ -31,6 +39,7 @@
     <video
       playsinline
       data-video
+      {{ has_poster }}
       {{ will_autoplay }}
     >
       {% if section.settings.video_mp4 != blank %}
@@ -91,6 +100,11 @@
         "vimeo"
       ],
       "label": "Video URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "cover_image",
+      "label": "t:sections.video.settings.cover_image.label"
     },
     {
       "type": "header",
