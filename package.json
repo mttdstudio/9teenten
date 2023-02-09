@@ -1,0 +1,23 @@
+{
+  "name": "9teenten",
+  "version": "1.0.0",
+  "author": "Tom Greenhill",
+  "description": "9teenten",
+  "scripts": {
+    "dev": "shopify theme dev --store=9teenten",
+    "kill": "killall node & kill -9 $(lsof -ti:9292)"
+  },
+  "devDependencies": {
+  },
+  "keywords": [
+    "shopify",
+    "theme"
+  ],
+  "bugs": "https://github.com/mttdstudio/9teenten/issues",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mttdstudio/9teenten.git"
+  },
+  "private": true
+}

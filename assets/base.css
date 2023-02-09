@@ -1333,8 +1333,8 @@ button.shopify-payment-button__button--unbranded,
 
 .svg-color-gradient {
   /* background: linear-gradient(45deg,#F17C58, #E94584, #24AADB , #27DBB1,#FFDC18, #FF3706); */
-  background-image: url('tie-dye.jpeg');
-  /* background-color: #ee0000; */
+  /* background-image: url('tie-dye.jpeg'); */
+  background-color: #ee0000;
   background-size: 800% 800%;
   animation: gradient 20s linear infinite;
   animation-direction: alternate;
