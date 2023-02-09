@@ -1344,9 +1344,18 @@ button.shopify-payment-button__button--unbranded,
   z-index: 1;
 }
 
-.svg-logo:hover .svg-color-gradient,
+/* .svg-logo:hover .svg-color-gradient,
 .svg-logo:focus .svg-color-gradient {
   opacity: 1;
+} */
+
+.svg-logo path {
+  transition: fill .15s ease-in-out;
+}
+
+.svg-logo:hover path,
+.svg-logo:focus path {
+  fill: red;
 }
 
 @keyframes gradient {
