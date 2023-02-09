@@ -23,7 +23,7 @@
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "button"
+            "picker_type": "dropdown"
           }
         },
         "quantity_selector": {
@@ -178,6 +178,7 @@
       ],
       "settings": {
         "title": "",
+        "copy": "",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
