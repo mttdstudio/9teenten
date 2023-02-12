@@ -1,0 +1,13 @@
+_shopify-scripts
+_src
+_tools
+node_modules
+package-lock.json
+package.json
+webpack.common.js
+webpack.development.js
+webpack.production.js
+.git
+.gitignore
+README.md
+Notes.md
