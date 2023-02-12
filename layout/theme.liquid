@@ -41,6 +41,53 @@
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     {{ content_for_header }}
 
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var elements = ['summary', 'a[href]', 'button:enabled', '[tabindex]:not([tabindex^="-"])', '[draggable]', 'area', 'input:not([type=hidden]):enabled', 'select:enabled']
+        var cursor = document.querySelector('#custom-cursor');
+        var links = document.querySelectorAll(elements);
+
+        var removeHoverClass = function(e) {
+          cursor.classList.remove('is-hover');
+          e.target.removeEventListener('mouseout', removeHoverClass);
+        }
+
+        document.addEventListener('mousemove', function(e){
+          var x = e.clientX;
+          var y = e.clientY;
+          cursor.style.left = `${x}px`;
+          cursor.style.top = `${y + 17}px`;
+        });
+
+        document.addEventListener('mousedown', function(){
+          cursor.classList.add('click');
+        });
+
+        document.addEventListener('mouseup', function(){
+          cursor.classList.remove('is-click')
+        });
+
+        document.addEventListener('mouseover', (e) => {
+          for (const elem of elements) {
+            if (e.target.matches(elem)) {
+              cursor.classList.add('is-hover');
+              console.log('match!')
+              e.target.addEventListener('mouseout', removeHoverClass)
+            }
+          }
+        });
+
+        {%- comment -%} links.forEach(item => {
+          item.addEventListener('mouseover', () => {
+            cursor.classList.add('is-hover');
+          });
+          item.addEventListener('mouseleave', () => {
+            cursor.classList.remove('is-hover');
+          });
+        }) {%- endcomment -%}
+      })
+    </script>
+
     {%- liquid
       assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
       assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
@@ -48,6 +95,35 @@
     %}
 
     {% style %}
+      .custom-cursor {
+        width: 35px;
+        height: 35px;
+        background-color: transparent;
+        position: fixed;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        transition: width .3s, height .3s;
+        z-index: 99999;
+        mix-blend-mode: difference;
+      }
+      .custom-cursor svg {
+        width: 100%;
+        height: 100%;
+      }
+      .custom-cursor path {
+        fill: white;
+        transition: fill .3s;
+      }
+      .custom-cursor.is-hover path {
+        fill: red;
+      }
+
+      body *,
+      body *:before,
+      body *:after {
+        cursor: none !important;
+      }
+
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
       {{ body_font_bold | font_face: font_display: 'swap' }}
       {{ body_font_italic | font_face: font_display: 'swap' }}
@@ -301,5 +377,9 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+    <div id="custom-cursor" class="custom-cursor">
+      {%- render 'svg-ace-of-spades' -%}
+    </div>
   </body>
 </html>
