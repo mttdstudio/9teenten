@@ -41,7 +41,7 @@
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     {{ content_for_header }}
 
-    <script>
+    {%- comment -%} <script>
       document.addEventListener('DOMContentLoaded', function() {
         var elements = ['summary', 'a[href]', 'button:enabled', '[tabindex]:not([tabindex^="-"])', '[draggable]', 'area', 'input:not([type=hidden]):enabled', 'select:enabled']
         var cursor = document.querySelector('#custom-cursor');
@@ -76,17 +76,8 @@
             }
           }
         });
-
-        {%- comment -%} links.forEach(item => {
-          item.addEventListener('mouseover', () => {
-            cursor.classList.add('is-hover');
-          });
-          item.addEventListener('mouseleave', () => {
-            cursor.classList.remove('is-hover');
-          });
-        }) {%- endcomment -%}
       })
-    </script>
+    </script> {%- endcomment -%}
 
     {%- liquid
       assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
@@ -95,7 +86,7 @@
     %}
 
     {% style %}
-      .custom-cursor {
+      /* .custom-cursor {
         width: 35px;
         height: 35px;
         background-color: transparent;
@@ -122,7 +113,7 @@
       body *:before,
       body *:after {
         cursor: none !important;
-      }
+      } */
 
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
       {{ body_font_bold | font_face: font_display: 'swap' }}
