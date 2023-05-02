@@ -41,44 +41,6 @@
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     {{ content_for_header }}
 
-    {%- comment -%} <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        var elements = ['summary', 'a[href]', 'button:enabled', '[tabindex]:not([tabindex^="-"])', '[draggable]', 'area', 'input:not([type=hidden]):enabled', 'select:enabled']
-        var cursor = document.querySelector('#custom-cursor');
-        var links = document.querySelectorAll(elements);
-
-        var removeHoverClass = function(e) {
-          cursor.classList.remove('is-hover');
-          e.target.removeEventListener('mouseout', removeHoverClass);
-        }
-
-        document.addEventListener('mousemove', function(e){
-          var x = e.clientX;
-          var y = e.clientY;
-          cursor.style.left = `${x}px`;
-          cursor.style.top = `${y + 17}px`;
-        });
-
-        document.addEventListener('mousedown', function(){
-          cursor.classList.add('click');
-        });
-
-        document.addEventListener('mouseup', function(){
-          cursor.classList.remove('is-click')
-        });
-
-        document.addEventListener('mouseover', (e) => {
-          for (const elem of elements) {
-            if (e.target.matches(elem)) {
-              cursor.classList.add('is-hover');
-              console.log('match!')
-              e.target.addEventListener('mouseout', removeHoverClass)
-            }
-          }
-        });
-      })
-    </script> {%- endcomment -%}
-
     {%- liquid
       assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
       assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
@@ -86,40 +48,51 @@
     %}
 
     {% style %}
-      /* .custom-cursor {
-        width: 35px;
-        height: 35px;
-        background-color: transparent;
-        position: fixed;
-        transform: translate(-50%, -50%);
-        pointer-events: none;
-        transition: width .3s, height .3s;
-        z-index: 99999;
-        mix-blend-mode: difference;
-      }
-      .custom-cursor svg {
-        width: 100%;
-        height: 100%;
-      }
-      .custom-cursor path {
-        fill: white;
-        transition: fill .3s;
-      }
-      .custom-cursor.is-hover path {
-        fill: red;
-      }
-
-      body *,
-      body *:before,
-      body *:after {
-        cursor: none !important;
-      } */
-
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
       {{ body_font_bold | font_face: font_display: 'swap' }}
       {{ body_font_italic | font_face: font_display: 'swap' }}
       {{ body_font_bold_italic | font_face: font_display: 'swap' }}
       {{ settings.type_header_font | font_face: font_display: 'swap' }}
+
+      @font-face {
+        font-family: 'Roberta';
+        src: url('{{ 'Roberta.woff2' | asset_url }}') format('woff2'),
+            url('{{ 'Roberta.woff' | asset_url }}') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      .collection-list .card__heading {
+        background-image: url('{{ '1910_blank.jpg' | asset_url }}');
+      }
+
+      .collection-list .card__heading::before,
+      .collection-list .card__heading::after {
+        content: '';
+        width: 25px;
+        height: 33px;
+        background-image: url('{{ 'founders-skull.png' | asset_img_url: width: 100 }}');
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: block;
+      }
+
+      @media screen and (min-width: 750px) {
+        .collection-list .card__heading::before,
+        .collection-list .card__heading::after {
+          width: 50px;
+          height: 65px;
+        }
+      }
+
+      .collection-list .card__heading::before {
+
+      }
+
+      .collection-list .card__heading::after {
+
+      }
 
       :root {
         /* --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }}; */
@@ -368,9 +341,5 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-
-    {%- comment -%} <div id="custom-cursor" class="custom-cursor">
-      {%- render 'svg-ace-of-spades' -%}
-    </div> {%- endcomment -%}
   </body>
 </html>

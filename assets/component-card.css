@@ -177,6 +177,34 @@
   margin-bottom: 0;
 }
 
+.collection-list .card__information {
+  text-align: center;
+}
+
+.collection-list .card__heading {
+  font-family: 'Roberta';
+  font-size: 6vw;
+  text-shadow: -0.35vw 0.35vw red;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  padding: 0 1vw;
+  background-size: cover;
+  transition: text-shadow 0.1s ease-in-out;
+}
+
+.collection-list .card__heading:hover {
+  text-shadow: -0.45vw 0.45vw red;
+}
+
+.collection-list .card__heading a {
+  padding: 0 1vw;
+}
+
+.collection-list .card__heading .icon-wrap {
+  display: none;
+}
+
 .card__heading:last-child {
   margin-bottom: 0;
 }
