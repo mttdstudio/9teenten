@@ -34,7 +34,7 @@ const init = ({ el }) => {
   });
 
   player.on('ended', (event) => {
-    window.location.assign("/collections/")
+    window.location.assign("/collections/merch");
   });
 
   // const checkScroll = () => {
