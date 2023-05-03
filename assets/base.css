@@ -2724,12 +2724,16 @@ details[open] > .header__submenu {
 }
 
 .header__menu-item span {
-  transition: text-decoration var(--duration-short) ease;
+  transition: all var(--duration-short) ease;
+  text-decoration-thickness: 3px;
+  text-decoration-color: red;
 }
 
 .header__menu-item:hover span {
   text-decoration: underline;
   text-underline-offset: 0.3rem;
+  text-decoration-thickness: 3px;
+  text-decoration-color: red;
   pointer-events: none;
 }
 
