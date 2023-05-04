@@ -2717,10 +2717,11 @@ details[open] > .header__submenu {
   text-decoration: none;
   color: rgb(var(--color-foreground));
   cursor: pointer;
+  transition: color var(--duration-short) ease;
 }
 
 .header__menu-item:hover {
-  color: rgb(var(--color-foreground));
+  color: red;
 }
 
 .header__menu-item span {
@@ -2735,7 +2736,6 @@ details[open] > .header__submenu {
   text-decoration-thickness: 3px;
   text-decoration-color: red;
   pointer-events: none;
-  color: red;
 }
 
 details[open] > .header__menu-item {
