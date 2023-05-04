@@ -2735,6 +2735,7 @@ details[open] > .header__submenu {
   text-decoration-thickness: 3px;
   text-decoration-color: red;
   pointer-events: none;
+  color: red;
 }
 
 details[open] > .header__menu-item {
