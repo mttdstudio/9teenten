@@ -50,6 +50,10 @@
                     {{ 'sections.cart.taxes_and_shipping_at_checkout' | t }}
                   {%- endif -%}
                 </small>
+
+                <small class="tax-note caption-large rte">
+                  {{ 'sections.cart.returns_html' | t: link: shop.refund_policy.url }}
+                </small>
               </div>
             {%- else -%}
               <div class="cart__ctas" {{ block.shopify_attributes }}>

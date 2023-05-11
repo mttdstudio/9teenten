@@ -184,9 +184,14 @@ cart-items {
 }
 
 .tax-note {
-  margin: 2.2rem 0 1.6rem auto;
+  margin: 2.2rem 0 1rem auto;
   text-align: center;
   display: block;
+}
+
+.tax-note + .tax-note {
+  margin-block-start: 0;
+  margin-block-end: 2rem;
 }
 
 .cart__checkout-button {
@@ -208,7 +213,6 @@ cart-items {
   }
 
   .tax-note {
-    margin-bottom: 2.2rem;
     text-align: right;
   }
 
