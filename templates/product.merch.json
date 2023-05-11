@@ -54,11 +54,10 @@
         },
         "collapsible-row-1": {
           "type": "collapsible_tab",
-          "disabled": true,
           "settings": {
-            "heading": "Shipping & Returns",
-            "icon": "truck",
-            "content": "",
+            "heading": "Returns & refunds",
+            "icon": "box",
+            "content": "<p>Our returns & refunds policy can be found <a href=\"\/policies\/refund-policy\" title=\"Refund Policy\">here<\/a>.<\/p>",
             "page": ""
           }
         },
