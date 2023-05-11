@@ -87,6 +87,7 @@ cart-items {
 
 .cart__note {
   height: fit-content;
+  margin-block-start: 3rem;
 }
 
 .cart__note label {
