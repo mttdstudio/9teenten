@@ -55,7 +55,7 @@
       ],
       "custom_css": [
         ".multicolumn-card__image {max-height: 100px;}",
-        ".multicolumn-card__info p {color: red; line-height: 1.3;}"
+        ".multicolumn-card__info p {color: red; line-height: 1.3; font-size: 17px}"
       ],
       "settings": {
         "title": "",
