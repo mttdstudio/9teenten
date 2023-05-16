@@ -150,7 +150,8 @@
       "xr_button": "View in your space",
       "xr_button_label": "View in your space, loads item in augmented reality window",
       "include_taxes": "Tax included.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping<\/a> calculated at checkout."
+      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping<\/a> calculated at checkout.",
+      "hoody_sizing_note": "Please note: Black, white and gray hoodies come in a slimmer modern fit. Red and royal come in a classic fit."
     },
     "modal": {
       "label": "Media gallery"

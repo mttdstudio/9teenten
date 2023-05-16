@@ -499,6 +499,13 @@
                             {{ value }}
                           </label>
                         {%- endfor -%}
+                        {%- capture hoody_sizing_note -%}
+                          {{ 'products.product.hoody_sizing_note' | t }}
+                        {%- endcapture -%}
+                        {% if hoody_sizing_note != blank and product.tags contains 'hoody' and option.name == 'Style' %}
+                          <br>
+                          <small class="form__note">{{ hoody_sizing_note }}</small>
+                        {% endif %}
                       </fieldset>
                     {%- endfor -%}
                     <script type="application/json">
