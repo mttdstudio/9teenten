@@ -354,6 +354,9 @@
                 {%- endform -%}
               </div>
             {%- when 'description' -%}
+              {%- unless product.available -%}
+                <p>SOLD, in a personal collection</p>
+              {%  endunless %}
               {%- if product.description != blank -%}
                 <div class="product__description rte quick-add-hidden">
                   {{ product.description }}
