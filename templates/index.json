@@ -13,14 +13,15 @@
             "video_webm": ""
           }
         },
-        "slide_zFNEGT": {
+        "slide_fQBYqy": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/flamer.jpg",
+            "image": "shopify:\/\/shop_images\/3_33af45e6-42bc-4086-bb13-49060c42b906.jpg",
             "heading": "Image slide",
             "title": "",
             "video_mp4": "",
-            "video_webm": ""
+            "video_webm": "",
+            "video_url_provider": ""
           }
         },
         "slide_NzCGcX": {
@@ -34,10 +35,20 @@
             "video_url_provider": ""
           }
         },
-        "slide_fQBYqy": {
+        "slide_zFNEGT": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/3_33af45e6-42bc-4086-bb13-49060c42b906.jpg",
+            "image": "shopify:\/\/shop_images\/flamer.jpg",
+            "heading": "Image slide",
+            "title": "",
+            "video_mp4": "",
+            "video_webm": ""
+          }
+        },
+        "slide_AfVffk": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1910-JACKSON_MILLER-90.jpg",
             "heading": "Image slide",
             "title": "",
             "video_mp4": "",
@@ -48,9 +59,10 @@
       },
       "block_order": [
         "slide_JdF7HB",
-        "slide_zFNEGT",
+        "slide_fQBYqy",
         "slide_NzCGcX",
-        "slide_fQBYqy"
+        "slide_zFNEGT",
+        "slide_AfVffk"
       ],
       "settings": {
         "slide_height": 450
