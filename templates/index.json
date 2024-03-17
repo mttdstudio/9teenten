@@ -27,7 +27,17 @@
         "slide_NzCGcX": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/20.jpg",
+            "image": "shopify:\/\/shop_images\/4.jpg",
+            "heading": "Image slide",
+            "title": "",
+            "video_mp4": "",
+            "video_webm": "",
+            "video_url_provider": ""
+          }
+        },
+        "slide_QbQkqU": {
+          "type": "slide",
+          "settings": {
             "heading": "Image slide",
             "title": "",
             "video_mp4": "",
@@ -50,6 +60,7 @@
         "slide_JdF7HB",
         "slide_fQBYqy",
         "slide_NzCGcX",
+        "slide_QbQkqU",
         "slide_zFNEGT"
       ],
       "settings": {
