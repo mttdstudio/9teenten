@@ -1,17 +1,59 @@
 {
   "sections": {
-    "2f59f09c-3006-4283-b9a4-818a3be76805": {
-      "type": "video-hero",
+    "carousel_6YRaQR": {
+      "type": "carousel",
+      "blocks": {
+        "slide_JdF7HB": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/20210220_122318.jpg",
+            "heading": "Image slide",
+            "title": "",
+            "video_mp4": "",
+            "video_webm": ""
+          }
+        },
+        "slide_fQBYqy": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/DSC_0790_ETHOS_Norway2017_PhotoAaronSchwartz_LowRes.jpg",
+            "heading": "Image slide",
+            "title": "",
+            "video_mp4": "",
+            "video_webm": "",
+            "video_url_provider": ""
+          }
+        },
+        "slide_NzCGcX": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/20.jpg",
+            "heading": "Image slide",
+            "title": "",
+            "video_mp4": "",
+            "video_webm": "",
+            "video_url_provider": ""
+          }
+        },
+        "slide_zFNEGT": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MG_3635-2.jpg",
+            "heading": "Image slide",
+            "title": "",
+            "video_mp4": "",
+            "video_webm": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_JdF7HB",
+        "slide_fQBYqy",
+        "slide_NzCGcX",
+        "slide_zFNEGT"
+      ],
       "settings": {
-        "heading": "",
-        "description": "",
-        "video_mp4": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/d3291e34983243b9ab1350f5bfcd43ad.mp4",
-        "video_webm": "",
-        "video_url_provider": "",
-        "autoplay": false,
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 0
+        "slide_height": 600
       }
     },
     "73a5698c-3f34-443e-bdc1-1c8aa5b6707b": {
@@ -174,69 +216,27 @@
         "padding_bottom": 36
       }
     },
-    "carousel_6YRaQR": {
-      "type": "carousel",
-      "blocks": {
-        "slide_JdF7HB": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/20210220_122318.jpg",
-            "heading": "Image slide",
-            "title": "",
-            "video_mp4": "",
-            "video_webm": ""
-          }
-        },
-        "slide_fQBYqy": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/DSC_0790_ETHOS_Norway2017_PhotoAaronSchwartz_LowRes.jpg",
-            "heading": "Image slide",
-            "title": "",
-            "video_mp4": "",
-            "video_webm": "",
-            "video_url_provider": ""
-          }
-        },
-        "slide_NzCGcX": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/20.jpg",
-            "heading": "Image slide",
-            "title": "",
-            "video_mp4": "",
-            "video_webm": "",
-            "video_url_provider": ""
-          }
-        },
-        "slide_zFNEGT": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/MG_3635-2.jpg",
-            "heading": "Image slide",
-            "title": "",
-            "video_mp4": "",
-            "video_webm": ""
-          }
-        }
-      },
-      "block_order": [
-        "slide_JdF7HB",
-        "slide_fQBYqy",
-        "slide_NzCGcX",
-        "slide_zFNEGT"
-      ],
+    "2f59f09c-3006-4283-b9a4-818a3be76805": {
+      "type": "video-hero",
       "settings": {
-        "slide_height": 600
+        "heading": "",
+        "description": "",
+        "video_mp4": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/d3291e34983243b9ab1350f5bfcd43ad.mp4",
+        "video_webm": "",
+        "video_url_provider": "",
+        "autoplay": false,
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
   "order": [
-    "2f59f09c-3006-4283-b9a4-818a3be76805",
+    "carousel_6YRaQR",
     "73a5698c-3f34-443e-bdc1-1c8aa5b6707b",
     "featured_collection_FymebA",
     "image_with_text_jE9Pzr",
     "featured_collection_ifynGw",
-    "carousel_6YRaQR"
+    "2f59f09c-3006-4283-b9a4-818a3be76805"
   ]
 }
