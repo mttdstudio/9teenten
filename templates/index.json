@@ -3,6 +3,27 @@
     "carousel_6YRaQR": {
       "type": "carousel",
       "blocks": {
+        "slide_zFNEGT": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/flamer.jpg",
+            "heading": "Image slide",
+            "title": "",
+            "video_mp4": "",
+            "video_webm": ""
+          }
+        },
+        "slide_NzCGcX": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/4.jpg",
+            "heading": "Image slide",
+            "title": "",
+            "video_mp4": "",
+            "video_webm": "",
+            "video_url_provider": ""
+          }
+        },
         "slide_JdF7HB": {
           "type": "slide",
           "settings": {
@@ -23,34 +44,13 @@
             "video_webm": "",
             "video_url_provider": ""
           }
-        },
-        "slide_NzCGcX": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/4.jpg",
-            "heading": "Image slide",
-            "title": "",
-            "video_mp4": "",
-            "video_webm": "",
-            "video_url_provider": ""
-          }
-        },
-        "slide_zFNEGT": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/flamer.jpg",
-            "heading": "Image slide",
-            "title": "",
-            "video_mp4": "",
-            "video_webm": ""
-          }
         }
       },
       "block_order": [
-        "slide_JdF7HB",
-        "slide_fQBYqy",
+        "slide_zFNEGT",
         "slide_NzCGcX",
-        "slide_zFNEGT"
+        "slide_JdF7HB",
+        "slide_fQBYqy"
       ],
       "settings": {
         "slide_height": 425
