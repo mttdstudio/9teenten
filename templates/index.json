@@ -180,17 +180,17 @@
         "slide_JdF7HB": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1_ae63ab60-e139-4514-84ab-3abd37f7be2f.jpg",
+            "image": "shopify:\/\/shop_images\/20210220_122318.jpg",
             "heading": "Image slide",
             "title": "",
             "video_mp4": "",
             "video_webm": ""
           }
         },
-        "slide_NzCGcX": {
+        "slide_fQBYqy": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/20.jpg",
+            "image": "shopify:\/\/shop_images\/DSC_0790_ETHOS_Norway2017_PhotoAaronSchwartz_LowRes.jpg",
             "heading": "Image slide",
             "title": "",
             "video_mp4": "",
@@ -198,10 +198,10 @@
             "video_url_provider": ""
           }
         },
-        "slide_fQBYqy": {
+        "slide_NzCGcX": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/DSC_0790_ETHOS_Norway2017_PhotoAaronSchwartz_LowRes.jpg",
+            "image": "shopify:\/\/shop_images\/20.jpg",
             "heading": "Image slide",
             "title": "",
             "video_mp4": "",
@@ -222,12 +222,12 @@
       },
       "block_order": [
         "slide_JdF7HB",
-        "slide_NzCGcX",
         "slide_fQBYqy",
+        "slide_NzCGcX",
         "slide_zFNEGT"
       ],
       "settings": {
-        "slide_height": 475
+        "slide_height": 600
       }
     }
   },
