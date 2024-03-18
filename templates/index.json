@@ -170,7 +170,7 @@
         "text_jVXWfD": {
           "type": "text",
           "settings": {
-            "text": "<p>The collaborative artworks of <a href=\"https:\/\/www.instagram.com\/_schoph_\/\">@_schoph_<\/a> and <a href=\"https:\/\/www.instagram.com\/jamiemlynn\/\">@jamiemlynn<\/a> are offered in various print sizes, creating the opportunity for both artists to share the good times through their artistic endeavours.<\/p>",
+            "text": "<h3>The collaborative artworks of <a href=\"https:\/\/www.instagram.com\/_schoph_\/\">@_schoph_<\/a> and <a href=\"https:\/\/www.instagram.com\/jamiemlynn\/\">@jamiemlynn<\/a> are offered in various print sizes, creating the opportunity for both artists to share the good times through their artistic endeavours.<\/h3>",
             "text_style": "body"
           }
         },
@@ -241,6 +241,55 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "image_banner_ND7i6r": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_RjQUqc": {
+          "type": "heading",
+          "settings": {
+            "heading": "PRINTS",
+            "heading_size": "h1"
+          }
+        },
+        "text_pwXfQe": {
+          "type": "text",
+          "settings": {
+            "text": "The collaborative artworks of @_schoph_ and @jamiemlynn are offered in various print sizes, creating the opportunity for both artists to share the good times through their artistic endeavours.",
+            "text_style": "body"
+          }
+        },
+        "buttons_D4WdgV": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Limited Edition",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Shop Open Edition",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_RjQUqc",
+        "text_pwXfQe",
+        "buttons_D4WdgV"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/NO_VOICES_IN_THE_SKY_w_sig.jpg",
+        "image_2": "shopify:\/\/shop_images\/HELL_RAISER_w_sig.jpg",
+        "image_overlay_opacity": 60,
+        "image_height": "small",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
     }
   },
   "order": [
@@ -249,6 +298,7 @@
     "featured_collection_FymebA",
     "image_with_text_jE9Pzr",
     "featured_collection_ifynGw",
-    "2f59f09c-3006-4283-b9a4-818a3be76805"
+    "2f59f09c-3006-4283-b9a4-818a3be76805",
+    "image_banner_ND7i6r"
   ]
 }
