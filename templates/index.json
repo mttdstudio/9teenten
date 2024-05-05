@@ -132,50 +132,6 @@
         "padding_bottom": 36
       }
     },
-    "image_with_text_nFn7J8": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_mj6E9B": {
-          "type": "heading",
-          "settings": {
-            "heading": "Limited Edition                           JAMIE LYNN PRO MODEL",
-            "heading_size": "h1"
-          }
-        },
-        "text_9x68th": {
-          "type": "text",
-          "settings": {
-            "text": "<h2><em>We’ve taken my favorite Lib 156 freestyle board and added some spice to it. With a custom color-way, unique ghosted blue top sheet and Base graphic, this board is wicked. Limited edition with only 19 of these available, be lucky and get one while you can.<br\/><\/em><\/h2><h2>-Jamie <\/h2>",
-            "text_style": "subtitle"
-          }
-        },
-        "button_MNTE3Y": {
-          "type": "button",
-          "settings": {
-            "button_label": "GET INVOLVED",
-            "button_link": "shopify:\/\/products\/limited-edition-lib-snowboard"
-          }
-        }
-      },
-      "block_order": [
-        "heading_mj6E9B",
-        "text_9x68th",
-        "button_MNTE3Y"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/MAIN.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "center",
-        "content_layout": "overlap",
-        "color_scheme": "accent-2",
-        "mobile_content_alignment": "center",
-        "padding_top": 12,
-        "padding_bottom": 24
-      }
-    },
     "featured_collection_FymebA": {
       "type": "featured-collection",
       "settings": {
@@ -292,7 +248,6 @@
   "order": [
     "carousel_6YRaQR",
     "73a5698c-3f34-443e-bdc1-1c8aa5b6707b",
-    "image_with_text_nFn7J8",
     "featured_collection_FymebA",
     "image_with_text_jE9Pzr",
     "featured_collection_ifynGw",
