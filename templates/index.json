@@ -170,7 +170,7 @@
         "desktop_content_position": "middle",
         "desktop_content_alignment": "center",
         "content_layout": "overlap",
-        "color_scheme": "accent-2",
+        "color_scheme": "inverse",
         "mobile_content_alignment": "center",
         "padding_top": 12,
         "padding_bottom": 24
