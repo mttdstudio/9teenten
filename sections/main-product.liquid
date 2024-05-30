@@ -616,6 +616,10 @@
                       disabled
                     >
                     <div class="product-form__buttons">
+
+{% render 'outlink-custom', product:product, o_showOutlink:1, o_hideCart:1 , o_classes: 'button button--full-width button--primary', o_style: '' %}
+<div class="o_original_{{ product.id }}">
+
                       <button
                         type="submit"
                         name="add"
@@ -647,6 +651,9 @@
                       {%- if block.settings.show_dynamic_checkout -%}
                         {{ form | payment_button }}
                       {%- endif -%}
+
+</div>
+
                     </div>
                   {%- endform -%}
                 </product-form>
