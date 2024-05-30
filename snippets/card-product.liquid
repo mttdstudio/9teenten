@@ -212,6 +212,10 @@
                     value="{{ card_product.selected_or_first_available_variant.id }}"
                     disabled
                   >
+
+{% render 'outlink-custom', product: card_product, o_showOutlink:1, o_hideCart:1 , o_classes: 'quick-add__submit button', o_style: 'text-decoration: none;' %}
+<div class="o_original_{{ card_product.id }}">
+
                   <button
                     id="{{ product_form_id }}-submit"
                     type="submit"
@@ -248,6 +252,9 @@
                       </svg>
                     </div>
                   </button>
+
+</div>
+
                 {%- endform -%}
               </product-form>
             {%- else -%}
