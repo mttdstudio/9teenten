@@ -129,6 +129,77 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_K6fdBG": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_JWzqn4": {
+          "type": "heading",
+          "settings": {
+            "heading": "1910 X HOFM — KILLED BY DEATH RING",
+            "heading_size": "h1"
+          }
+        },
+        "text_XYtMEn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>After the huge interest and disappointment that the first collaboration wasn't available for sale, we partnered with HOFM to put out a second offering. Designed by Schoph, using the Killed by Death\" artwork he produced for the hero art piece in our upcoming apparel collection! We're stoked to have this second piece available to all. A limited edition of 29 pieces are available on a first come, first serve basis so don't sleep on it. Be lucky!<\/p>",
+            "text_style": "subtitle"
+          }
+        },
+        "button_URqgme": {
+          "type": "button",
+          "settings": {
+            "button_label": "Buy Now on HOFM",
+            "button_link": "https:\/\/thehouseofmaiden.com\/products\/1910-x-hofm-killed-by-death"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JWzqn4",
+        "text_XYtMEn",
+        "button_URqgme"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/1910_e6e9541c-ffff-4082-ac9b-17e2dc2c1146.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "center",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 4,
+        "padding_bottom": 16
+      }
+    },
+    "featured_collection_FymebA": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Shop Hoodies",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "hoodies",
+        "products_to_show": 8,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
         "padding_bottom": 36
       }
     },
@@ -176,77 +247,6 @@
         "padding_bottom": 36
       }
     },
-    "featured_collection_FymebA": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Shop Hoodies",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "hoodies",
-        "products_to_show": 8,
-        "columns_desktop": 3,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "link",
-        "enable_desktop_slider": true,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 0,
-        "padding_bottom": 36
-      }
-    },
-    "image_with_text_K6fdBG": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_JWzqn4": {
-          "type": "heading",
-          "settings": {
-            "heading": "1910 X HOFM — KILLED BY DEATH RING",
-            "heading_size": "h1"
-          }
-        },
-        "text_XYtMEn": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Our 2nd Collaboration ring with sister company <a href=\"https:\/\/thehouseofmaiden.com\/\" target=\"_blank\" title=\"https:\/\/thehouseofmaiden.com\/\">House of Maiden<\/a>.<\/p><p>After the huge interest and disappointment that the 1st collaboration wasn't available for sale, designed by <a href=\"https:\/\/schoph.com\/\" target=\"_blank\" title=\"Schoph\">Schoph<\/a> using the \"Killed by death\" artwork he produced for the company's hero art piece for 24\/25, we're stoked to have this 2nd limited piece available to the masses.<\/p>",
-            "text_style": "subtitle"
-          }
-        },
-        "button_URqgme": {
-          "type": "button",
-          "settings": {
-            "button_label": "Buy Now on HOFM",
-            "button_link": "https:\/\/thehouseofmaiden.com\/products\/1910-x-hofm-killed-by-death"
-          }
-        }
-      },
-      "block_order": [
-        "heading_JWzqn4",
-        "text_XYtMEn",
-        "button_URqgme"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/1910_e6e9541c-ffff-4082-ac9b-17e2dc2c1146.jpg",
-        "height": "adapt",
-        "desktop_image_width": "small",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "center",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-2",
-        "mobile_content_alignment": "left",
-        "padding_top": 16,
-        "padding_bottom": 16
-      }
-    },
     "featured_collection_ifynGw": {
       "type": "featured-collection",
       "settings": {
@@ -292,9 +292,9 @@
   "order": [
     "carousel_6YRaQR",
     "73a5698c-3f34-443e-bdc1-1c8aa5b6707b",
-    "image_with_text_jE9Pzr",
-    "featured_collection_FymebA",
     "image_with_text_K6fdBG",
+    "featured_collection_FymebA",
+    "image_with_text_jE9Pzr",
     "featured_collection_ifynGw",
     "2f59f09c-3006-4283-b9a4-818a3be76805"
   ]
