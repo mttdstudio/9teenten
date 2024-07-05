@@ -256,33 +256,6 @@
         "padding_bottom": 36
       }
     },
-    "featured_collection_ifynGw": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Shop All Merch",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "merch",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "link",
-        "enable_desktop_slider": true,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "2f59f09c-3006-4283-b9a4-818a3be76805": {
       "type": "video-hero",
       "settings": {
@@ -304,7 +277,6 @@
     "image_with_text_K6fdBG",
     "featured_collection_FymebA",
     "image_with_text_jE9Pzr",
-    "featured_collection_ifynGw",
     "2f59f09c-3006-4283-b9a4-818a3be76805"
   ]
 }
